@@ -69,4 +69,3 @@ export const getRooms = async (req, res, next) => {
     next(err)
   }
 }
-
