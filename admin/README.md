@@ -8,7 +8,7 @@
 * React Circular progressbar
 
 ### Preview :
-![preview](https://i.ibb.co/VjdZYGN/screencapture-localhost-3000-2022-05-19-10-50-12.png)
+![preview](https://i.ibb.co/DwYWNyM/Screenshot-1.png)
 #### User page with Dark mode
 ![preview2](https://i.ibb.co/2MgrVrn/screencapture-localhost-3000-users-test-2022-05-19-10-51-41.png)
 
