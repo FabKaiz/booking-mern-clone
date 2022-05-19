@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <span className="logo">lamadmin</span>
         </Link>
       </div>
@@ -26,17 +26,25 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </Link>
           </li>
           <p className="title">LISTS</p>
-          <Link to="/users" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/users"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <li>
               <PersonOutlineIcon className="icon" />
               <span>Users</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/products"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <li>
               <StoreIcon className="icon" />
               <span>Products</span>
