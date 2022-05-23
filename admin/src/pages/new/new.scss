@@ -29,7 +29,7 @@
           width: 100px;
           height: 100px;
           border-radius: 50%;
-          object-fit: contain;
+          object-fit: cover;
         }
       }
 
@@ -40,7 +40,7 @@
           display: flex;
           flex-wrap: wrap;
           gap: 40px;
-          justify-content: space-around;
+          justify-content: space-between;
 
           .formInput {
             width: 40%;
