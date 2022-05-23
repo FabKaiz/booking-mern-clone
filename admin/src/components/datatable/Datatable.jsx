@@ -1,6 +1,5 @@
 import './datatable.scss'
 import { DataGrid } from '@mui/x-data-grid'
-import { userColumns, userRows } from '../../datatablesource'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch.js'
@@ -11,20 +10,24 @@ const Datatable = ({ columns }) => {
   const path = location.pathname.split('/')[1]
 
   const [list, setList] = useState([])
-  const { data, loading, error } = useFetch(`/${path}`)
+  const { data } = useFetch(`/${path}`)
 
   useEffect(() => {
     setList(data)
   }, [data])
-  
 
   const handleDelete = async (id) => {
     try {
       await axios.delete(`/${path}/${id}`)
       setList(list.filter((item) => item._id !== id))
     } catch (err) {
-      
+      console.log(err)
     }
+  }
+
+  const capitalizeFirstLetter = (string) => {
+    const capitalizedPath = string.charAt(0).toUpperCase() + string.slice(1)
+    return capitalizedPath
   }
 
   const actionColumn = [
@@ -53,8 +56,8 @@ const Datatable = ({ columns }) => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
+        {capitalizeFirstLetter(path)}
+        <Link to={`/${path}/new`} className="link">
           Add New
         </Link>
       </div>
